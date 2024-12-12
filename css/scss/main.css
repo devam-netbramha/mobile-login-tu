@@ -695,9 +695,14 @@ table {
 .main .remapping .error-message p + p {
   margin-top: 10px;
 }
+.main .remapping .error-message p a {
+  color: #00A6CA;
+  text-decoration: underline;
+}
 .main .remapping .error-message a {
   margin-top: 24px;
-  max-width: 160px;
+  max-width: -moz-max-content;
+  max-width: max-content;
   width: 100%;
 }
 .main .remapping__header {
@@ -819,6 +824,54 @@ table {
   line-height: 20px;
   letter-spacing: 0.28px;
   color: #595959;
+}
+.main .password__check {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+}
+.main .password__check-label {
+  font-family: "IntroSemiBold";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #595959;
+  margin-bottom: 8px;
+}
+.main .password__check li {
+  font-family: "IntroRegular";
+  font-size: 14px;
+  line-height: 19px;
+  color: #595959;
+  letter-spacing: 0.28px;
+  margin-bottom: 0;
+  position: relative;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+}
+.main .password__check li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.main .password__check li::before {
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/normal-dot.svg");
+}
+.main .password__check li.valid {
+  color: #008A00;
+}
+.main .password__check li.valid::before {
+  background-image: url("../../images/valid-tick.svg");
+}
+.main .password__check li.invalid {
+  color: #EB0000;
+}
+.main .password__check li.invalid::before {
+  background-image: url("../../images/invalid-tick.svg");
 }
 
 .login__footer {

@@ -610,11 +610,16 @@
                     &+p {
                         margin-top: 10px;
                     }
+
+                    a {
+                        color: #00A6CA;
+                        text-decoration: underline;
+                    }
                 }
 
                 a {
                     margin-top: 24px;
-                    max-width: 160px;
+                    max-width: max-content;
                     width: 100%;
                 }
             }
@@ -764,6 +769,65 @@
         line-height: 20px;
         letter-spacing: 0.28px;
         color: #595959;
+    }
+
+    .password {
+        &__check {
+            margin: 0;
+            margin-bottom: 24px;
+            padding: 0;
+
+            &-label {
+                font-family: $isb;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 600;
+                color: #595959;
+                margin-bottom: 8px;
+            }
+
+            li {
+                font-family: $ir;
+                font-size: 14px;
+                line-height: 19px;
+                color: #595959;
+                letter-spacing: 0.28px;
+                margin-bottom: 0;
+                position: relative;
+                padding-left: calc(16px + 8px);
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+
+                &::before {
+                    left: 0;
+                    position: absolute;
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../../images/normal-dot.svg');
+                }
+
+                &.valid {
+                    color: #008A00;
+
+                    &::before {
+                        background-image: url('../../images/valid-tick.svg');
+                    }
+                }
+
+                &.invalid {
+                    color: #EB0000;
+
+                    &::before {
+                        background-image: url('../../images/invalid-tick.svg');
+                    }
+                }
+            }
+        }
     }
 }
 
